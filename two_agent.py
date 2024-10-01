@@ -7,6 +7,7 @@ from autogen import ConversableAgent
 # Load environment variables (e.g., OpenAI API key)
 _ = load_dotenv(find_dotenv())  # Read local .env file
 openai.api_key = os.environ.get('OPENAI_API_KEY')
+openai.api_key = st.secrets["general"]["openai_apikey"]
 
 # Sidebar Layout (Column 1 for logo, company, and developers' names)
 with st.sidebar:
